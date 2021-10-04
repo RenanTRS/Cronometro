@@ -19,14 +19,15 @@
                         <span>05:33:11</span>
                     </div>
                     <div class="block-btn">
-                        <button data-btn="play" class="active"><img src="./public/images/play.svg" alt="play"></button>
-                        <button data-btn="pause"><img src="./public/images/pause.svg" alt="pause" ></button>
-                        <button data-btn="stop"><img src="./public/images/stop.svg" alt="stop"></button>
+                        <button data-btn="play" class="active" onclick="btnClick('play')"><img src="./public/images/play.svg" alt="play"></button>
+                        <button data-btn="pause" onclick="btnClick('pause')"><img src="./public/images/pause.svg" alt="pause" ></button>
+                        <button data-btn="stop" onclick="btnClick('stop')"><img src="./public/images/stop.svg" alt="stop"></button>
                     </div>
                 </section>
             </main>
         </div>
     </div>
     <script src="index.js" type="module"></script>
+    <script src="./public/scripts/btn-function.js"></script>
 </body>
 </html>
