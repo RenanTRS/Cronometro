@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BlocoTimer = styled.div`
+export const BlocoTimer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,12 +16,12 @@ export const BlocoTimer = styled.div`
 
     padding: 5.7rem 3.8rem;
 
-    div{
+    span{
         font-size: 9.8rem;
     }
 `;
 
-export const ButtonBlock = styled.div`
+export const ButtonBlock = styled.span`
     display: flex;
     justify-content: space-around;
     align-items: center;

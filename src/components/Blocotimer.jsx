@@ -32,7 +32,7 @@ export function Blocotimer(){
 
     return(
         <BlocoTimer>
-            <div>00:00:00</div>
+            <span>00:00:00</span>
             <ButtonBlock>
                 <Button marginLeft='2rem' display={play} onClick={event => handleChangeDisplayPlay(event)}>
                     <img src={playImg} alt="play" />
