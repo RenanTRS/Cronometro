@@ -15,10 +15,26 @@ export const BlocoTimer = styled.section`
     box-shadow: 1rem 1rem 1.5rem #4646461F, -1rem -1rem 1.5rem #FFFFFF80;
 
     padding: 5.7rem 3.8rem;
+`;
+export const Timer = styled.div`
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 9.8rem;
 
     span{
-        font-size: 9.8rem;
+        display: flex;
+        align-items: center;
+
+        height: 8.3rem;
     }
+`;
+export const Time = styled.div`
+    width: 15rem;
+    
+    text-align: center;
 `;
 
 export const ButtonBlock = styled.span`
