@@ -21,7 +21,7 @@ export const Timer = styled.div`
     width: 100%;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 9.8rem;
 
     span{

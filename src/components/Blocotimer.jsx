@@ -12,9 +12,8 @@ export function Blocotimer(){
     const [play, setPlay] = useState('flex');
     const [pause, setPause] = useState('none');
     const [stop, setStop] = useState('none');
-    const [second, setSecond] = useState(0);
-    const [minutes, setMinutes] = useState(0);
     const [time, setTime] = useState({ms: 0, s: 0, m: 0});
+    const [interv,setInterv] = useState();
 
     
     let updateM = time.m, updateS = time.s, updateMs = time.ms;
@@ -39,32 +38,19 @@ export function Blocotimer(){
         setPause('flex');
         setStop('flex');
         run();
-        setInterval(run, 10);
-
-    /*
-        const interval = setInterval(() => {
-            for(let i = 0; i < 60; i++){}
-            setSecond(second + 1)
-        }, 1000);
-        
-        if(second === '60'){
-            setMinutes(minutes + 1);
-        }
-        //for(let i = 0; i <= 60; i++){
-        //}
-        */
+        setInterv(setInterval(run, 10));
     }
     function handleChangeDisplayPause(event){
         setPlay('flex');
         setPause('none');
-        clearInterval();
+        clearInterval(interv);
     }
     function handleChangeDisplayStop(event){
         setPlay('flex');
         setPause('none');
         setStop('none');
-
-        //clearInterval(interval);
+        clearInterval(interv);
+        setTime({ms: 0, s: 0, m: 0});
     }
 
 
