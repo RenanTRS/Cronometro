@@ -64,18 +64,7 @@ export function Blocotimer(){
                 <Time>{time.s >= 10 ? time.s : "0"+time.s}</Time><span>:</span>
                 <Time>{time.ms >= 10 ? time.ms : "0"+time.ms}</Time>
             </Timer>
-            <ButtonBlock>
-                <Button marginLeft='2rem' display={play} onClick={event => handleChangeDisplayPlay(event)}>
-                    <img src={playImg} alt="play" />
-                </Button> 
-                <Button display={pause} onClick={event => handleChangeDisplayPause(event)}>
-                    <img src={pauseImg} alt="pause" />
-                </Button> 
-                <Button display={stop} onClick={event => handleChangeDisplayStop(event)}>
-                    <img src={stopImg} alt="stop" />
-                </Button> 
-            </ButtonBlock>
-
+                <Button status={status} play={handlePlay} pause={handlePause} stop={handleStop}/>
         </BlocoTimer>
     );
 }
