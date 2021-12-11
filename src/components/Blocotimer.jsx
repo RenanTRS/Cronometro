@@ -1,24 +1,21 @@
 import React, {useState} from 'react';
 
-//Assets
-import playImg from '../assets/images/play.svg';
-import pauseImg from '../assets/images/pause.svg';
-import stopImg from '../assets/images/stop.svg';
+//Styled Component
+import { BlocoTimer, Timer, Time } from '../styles/components/Blocotimer';
 
-//Styles
-import { BlocoTimer, ButtonBlock, Button, Timer, Time } from '../styles/components/Blocotimer';
+//Component
+import { Button } from './Button';
 
 export function Blocotimer(){
-    const [play, setPlay] = useState('flex');
-    const [pause, setPause] = useState('none');
-    const [stop, setStop] = useState('none');
     const [time, setTime] = useState({ms: 0, s: 0, m: 0});
-    const [interv,setInterv] = useState();
+    const [interv,setInterv] = useState(); //Para operar o setInterval
+    const [status, setStatus] = useState(1); //Para a troca dos botões
 
     
     let updateM = time.m, updateS = time.s, updateMs = time.ms;
 
-    const run = () => {
+    //Faz a contagem
+    function run(){
         if(updateS === 60){
             updateM++;
             updateS = 0;
@@ -27,35 +24,29 @@ export function Blocotimer(){
             updateS++;
             updateMs = 0;
         }
-        updateMs++;
+        updateMs++; //Atualiza contagem
 
         return setTime({ms: updateMs, s: updateS, m: updateM});
     }
     
-    //Muda o display
-    function handleChangeDisplayPlay(event){
-        setPlay('none');
-        setPause('flex');
-        setStop('flex');
-        run();
+    //Inicia a contagem e troca os botões 
+    function handlePlay(){
         setInterv(setInterval(run, 10));
         setStatus(2);
     }
-    function handleChangeDisplayPause(event){
-        setPlay('flex');
-        setPause('none');
+    
+    //Pausa a contagem e troca o botão
+    function handlePause(){
         clearInterval(interv);
         setStatus(3);
     }
-    function handleChangeDisplayStop(event){
-        setPlay('flex');
-        setPause('none');
-        setStop('none');
+
+    //Para a contagem, zera o timer e troca o botão
+    function handleStop(){
         clearInterval(interv);
         setTime({ms: 0, s: 0, m: 0});
         setStatus(1);
     }
-
 
     return(
         <BlocoTimer display="flex">

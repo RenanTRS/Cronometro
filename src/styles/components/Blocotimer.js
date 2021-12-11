@@ -45,7 +45,7 @@ export const ButtonBlock = styled.span`
     width: 100%;
 `;
 
-export const Button = styled.button`
+export const ButtonS = styled.button`
     display: ${props => props.display || 'flex'};
     justify-content: center;
     align-items: center;
