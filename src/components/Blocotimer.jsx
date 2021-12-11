@@ -39,11 +39,13 @@ export function Blocotimer(){
         setStop('flex');
         run();
         setInterv(setInterval(run, 10));
+        setStatus(2);
     }
     function handleChangeDisplayPause(event){
         setPlay('flex');
         setPause('none');
         clearInterval(interv);
+        setStatus(3);
     }
     function handleChangeDisplayStop(event){
         setPlay('flex');
@@ -51,6 +53,7 @@ export function Blocotimer(){
         setStop('none');
         clearInterval(interv);
         setTime({ms: 0, s: 0, m: 0});
+        setStatus(1);
     }
 
 
