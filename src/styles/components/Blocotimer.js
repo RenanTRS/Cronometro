@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { media } from "../media";
+
 export const BlocoTimer = styled.section`
     display: flex;
     flex-direction: column;
@@ -15,6 +17,15 @@ export const BlocoTimer = styled.section`
     box-shadow: 1rem 1rem 1.5rem #4646461F, -1rem -1rem 1.5rem #FFFFFF80;
 
     padding: 5.7rem 3.8rem;
+
+    ${media.mobile}{
+        width: 100%;
+        //height: 100%;
+
+        box-shadow: none;
+
+        padding: 5.7rem 2rem;
+    }
 `;
 export const Timer = styled.div`
 
@@ -23,6 +34,11 @@ export const Timer = styled.div`
     display: flex;
     justify-content: center;
     font-size: 9.8rem;
+
+    ${media.mobile}{
+        font-size: clamp(6rem, 5vw, 9.8rem);
+        align-items: center;
+    }
 
     span{
         display: flex;
@@ -35,6 +51,10 @@ export const Time = styled.div`
     width: 15rem;
     
     text-align: center;
+
+    ${media.mobile}{
+        width: clamp(1rem, 20vw, 15rem);
+    }
 `;
 
 export const ButtonBlock = styled.span`
