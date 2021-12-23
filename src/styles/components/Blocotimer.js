@@ -26,6 +26,14 @@ export const BlocoTimer = styled.section`
 
         padding: 5.7rem 0;
     }
+    ${media.mobileLandscape}{
+        box-shadow: none;
+
+        padding: 0;
+        
+        width: 100%;
+        height: clamp(23rem,72vh,35rem);
+    }
 `;
 export const Timer = styled.div`
 
