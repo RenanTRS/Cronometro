@@ -24,7 +24,7 @@ export const BlocoTimer = styled.section`
 
         box-shadow: none;
 
-        padding: 5.7rem 2rem;
+        padding: 5.7rem 0;
     }
 `;
 export const Timer = styled.div`
@@ -36,7 +36,7 @@ export const Timer = styled.div`
     font-size: 9.8rem;
 
     ${media.mobile}{
-        font-size: clamp(6rem, 5vw, 9.8rem);
+        font-size: clamp(4rem, 14vw, 9.8rem);
         align-items: center;
     }
 
