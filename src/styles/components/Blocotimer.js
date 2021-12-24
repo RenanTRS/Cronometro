@@ -34,6 +34,17 @@ export const BlocoTimer = styled.section`
         width: 100%;
         height: clamp(23rem,72vh,35rem);
     }
+    ${media.tablet}{
+        width: 100%;
+
+        box-shadow: none;
+    }
+    ${media.tabletLandscape}{
+        width: 100%;
+        height: clamp(23rem, 72vh, 35rem);
+
+        padding: 0;
+    }
 `;
 export const Timer = styled.div`
 
@@ -71,6 +82,10 @@ export const ButtonBlock = styled.span`
     align-items: center;
 
     width: 100%;
+
+    ${media.tabletLandscape}{
+        max-width: 51.5rem;
+    }
 `;
 
 export const ButtonS = styled.button`
